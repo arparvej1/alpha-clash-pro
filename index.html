@@ -39,7 +39,7 @@
     <main
         class="bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center min-h-[100vh] text-white text-center flex justify-center items-center poppins-regular">
         <!-- Home Screen -->
-        <section id="home-screen" class="flex flex-col gap-9 hidden">
+        <section id="home-screen" class="flex flex-col gap-9">
             <h1 class="text-9xl anton-regular uppercase">ALPHABET CLASH</h1>
             <p>
                 Unleash Your Keyboard Kung Fu : Press “Enter” to Play
@@ -98,27 +98,27 @@
             </div>
             <!-- life score -->
             <div class="flex justify-between">
-                <button class="btn rounded-full bg-purple-500 text-white px-4">
+                <button class="btn rounded-full bg-purple-500 text-white px-4 text-xl">
                     Life
                     <img src="images/heart.svg">
-                    5
+                    <span id="current-life">5</span>
                 </button>
-                <button class="btn rounded-full bg-purple-700 text-white px-4">
+                <button class="btn rounded-full bg-purple-700 text-white px-4 text-xl">
                     Score
                     <img src="images/dollar.svg">
-                    0
+                    <span id="current-score">0</span>
                 </button>
             </div>
         </section>
         <!-- Game End Screen -->
-        <section id="game-end-screen">
+        <section id="game-end-screen" class="hidden">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
                 <h3 class="text-3xl">Game Over !</h3>
                 <h3 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
                     <span id="last-score">0</span>
                 </h3>
-                <button class="btn">Play Again</button>
+                <button id="play-again" class="btn">Play Again</button>
                 <p>Practice will make you a Pro</p>
             </div>
         </section>
