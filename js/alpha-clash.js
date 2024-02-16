@@ -17,14 +17,20 @@ function play() {
 function handleKeyboardKeyUpEvent(event) {
     const playerPressed = event.key;
     const currentAlphabet = document.getElementById('current-alphabet').innerText.toLowerCase();
+    console.log(playerPressed, life, score);
+    if (playerPressed === 'Enter' && gameOn === 0) {
+        life === 5 ? play() : null;
+    }
 
     if (playerPressed === 'Escape') {
         gameOver();
         return;
     }
+
     if (gameOn === 0) {
         return;
     }
+
     if (playerPressed === currentAlphabet) {
         score++;
         setTextElementValueById('current-score', score);
